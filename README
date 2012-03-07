@@ -1,0 +1,12 @@
+Anonimizer permite que los usuarios participen en encuestas sin revelar su identidad, garantizando que solamente los miembros de un censo pueden participar en la encuesta.
+
+Hay dos tipos de actores:
+
+administradores de encuestas, que definen el conjunto de electores. Estos usuarios pueden definir el censo de electores (mediante correo electrónico), el mensaje de bienvenida, y tendrán acceso a una consola de gestión para conocer los datos de participación: número de participantes que han respondido. Así mismo podrán verificar que la identidad de un elector anónimo corresponde a un elector del censo, sin revelar quien es el elector.
+electores, que reciben un identificador anónimo para participar en las encuestas. La asociación entre la identidad real y anónima de un elector nunca se revela a un administrador.
+Se ofrece un API para administradores con distintas capacidades:
+
+provisión: CRUD de elecciones
+censos: CRUD de electores de un censo, listado del censo, tamaño del censo.
+elecciones: obtener id anónimo, regenerar id anónimo, verificar si id anónimo es miembro del censo, numero de votos emitidos.
+Estas operaciones podrán realizarse para un objeto o varios a la vez del modelo, bastará con concatenar los datos en la petición.
